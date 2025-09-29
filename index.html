@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自动化画布三期开发</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="nav-container">
+        <div class="nav-dots">
+            <div class="nav-dot active" data-slide="0"></div>
+            <div class="nav-dot" data-slide="1"></div>
+            <div class="nav-dot" data-slide="2"></div>
+            <div class="nav-dot" data-slide="3"></div>
+            <div class="nav-dot" data-slide="4"></div>
+            <div class="nav-dot" data-slide="5"></div>
+            <div class="nav-dot" data-slide="6"></div>
+        </div>
+    </nav>
+
+    <!-- 幻灯片容器 -->
+    <div class="slideshow-container">
+        <!-- 幻灯片0: 首页 -->
+        <div class="slide active">
+            <div class="slide-content cover-slide">
+                <div class="cover-header">
+                    <h1 class="cover-title">画布三期产品发布会</h1>
+                    <div class="cover-subtitle">自动化接待系统全面升级</div>
+                </div>
+                
+                <div class="cover-main">
+                    <div class="cover-icon">🎯</div>
+                    <div class="cover-tagline">让自动化接待能独立完成完整的客户服务流程</div>
+                </div>
+
+                <div class="cover-footer">
+                    <div class="cover-date">2024年产品发布</div>
+                    <div class="cover-team">产品开发团队</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 幻灯片1: 目标与业务背景 -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">业务背景</h2>
+                </div>
+                <div class="content-section">
+                    <div class="pain-points">
+                        <div class="pain-point">
+                            <div class="pain-icon">⚠️</div>
+                            <div class="pain-content">
+                                <h4>节点不会等待顾客回复</h4>
+                                <p>当前自动化节点都是一次性执行完成，无法根据顾客的回复内容进入不同的回复流程。</p>
+                            </div>
+                        </div>
+                        <div class="pain-point">
+                            <div class="pain-icon">❌</div>
+                            <div class="pain-content">
+                                <h4>缺失针对性回复</h4>
+                                <p>画布接待主要用于引导顾客留资，但当顾客提出问题时，缺乏能即时针对性解答的功能，导致留资转化效果受限。</p>
+                            </div>
+                        </div>
+                        <div class="pain-point">
+                            <div class="pain-icon">🔄</div>
+                            <div class="pain-content">
+                                <h4>意图配置重复</h4>
+                                <p>在画布接待中，很多场景需要反复判断用户意图，重复配置成本高，效率低。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 幻灯片2: 迭代目标 -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">迭代目标</h2>
+                </div>
+                
+                <div class="content-section">
+                    <h3 class="subsection-title">核心设计理念</h3>
+                    <div class="goal-box">
+                        <p>让自动化接待能独立完成对顾客的完整接待流程，并针对这一目标下的三大痛点设计了相应的解决方案。</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3 class="subsection-title">迭代价值</h3>
+                    <div class="features-section">
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>提升接待效率</h4>
+                                <p>自动化回答高频问题，减少人工干预，降低运营成本。</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>优化用户体验</h4>
+                                <p>模拟真实对话场景，提供更自然、更个性化的互动体验。</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>降低配置成本</h4>
+                                <p>减少重复意图配置，简化画布搭建流程，提高开发效率。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 幻灯片3: 功能升级 -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">功能升级</h2>
+                </div>
+                
+                <div class="features-section">
+                    <h3 class="features-title">🎯 核心新功能</h3>
+                    <div class="feature-grid">
+                        <div class="feature-card" data-image="images/新增问答节点.png">
+                            <h4>新增问答节点</h4>
+                            <p>可调用知识库文本自动回答用户问题，提升客服效率，减少高频问题重复解答。</p>
+                        </div>
+                        <div class="feature-card" data-image="images/新增兜底意图.gif">
+                            <h4>新增兜底意图</h4>
+                            <p>兜底意图为所有意图识别节点共用，当未匹配到具体意图时，自动进入兜底分支，避免遗漏，减少重复配置。</p>
+                        </div>
+                        <div class="feature-card" data-image="images/等待回复模式.png">
+                            <h4>新增等待回复模式</h4>
+                            <p>节点可选择"立即回复"或"等待用户回复"，对话逻辑更贴近真实交流，提升客户体验。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h3 class="features-title">功能优化</h3>
+                    <div class="feature-grid two-columns">
+                        <div class="feature-card" data-image="images/新增抓手模式.gif">
+                            <h4>新增抓手模式</h4>
+                            <p>支持抓手与指针双模式切换；抓手模式便于快速拖动画布，指针模式便于框选节点，操作更直观高效。</p>
+                        </div>
+                        <div class="feature-card" data-image="images/消息节点升级.gif">
+                            <h4>消息节点升级</h4>
+                            <p>新增插入表情功能，让对话更生动自然；支持插入顾客字段，实现个性化回复体验。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 幻灯片4: 产品演示 -->
+        <div class="slide demo-slide">
+            <div class="slide-content">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">Demo演示</h2>
+                </div>
+                
+                <div class="demo-container">
+                    <div class="demo-placeholder">
+                        <div class="demo-icon">🎬</div>
+                        <h3>产品演示区域</h3>
+                        <p>现场演示画布接待新功能</p>
+                        <div class="demo-status">
+                            <span class="status-dot live"></span>
+                            <span>Live Demo 正在演示中</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3 class="subsection-title">演示内容亮点</h3>
+                    <div class="features-section">
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>问答节点演示</h4>
+                                <p>展示如何在画布中配置问答节点，演示知识库调用和自动回复流程。</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>兜底意图演示</h4>
+                                <p>演示兜底意图机制，当用户意图无法识别时如何自动进入兜底分支。</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>等待回复演示</h4>
+                                <p>展示节点等待用户回复的模式，模拟真实对话场景的交互体验。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 幻灯片5: 下次迭代计划 -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">下次迭代计划</h2>
+                </div>
+                
+                <div class="roadmap-section">
+                    <div class="roadmap-goal-container">
+                        <div class="roadmap-main-goal">
+                            <div class="goal-icon">🎯</div>
+                            <div class="goal-content">
+                                <h3>目标</h3>
+                                <p>来鼓2.0在实现1.0用户需求的基础上深度融合 AI，让产品更加智能。</p>
+                            </div>
+                        </div>                    
+                            <div class="plan-steps">
+                                <div class="plan-step">
+                                    <div class="step-icon">⚡</div>
+                                    <div class="step-content">
+                                        <h5 class="step-title">新增接待模式</h5>
+                                        <p class="step-description">在顾客进线时就可以选择不同的接待模式，来应对不同的顾客需求。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="plan-step">
+                                    <div class="step-icon">🎨</div>
+                                    <div class="step-content">
+                                        <h5 class="step-title">业务场景拓展</h5>
+                                        <p class="step-description">新增更多节点以及触发事件，让画布功能更贴合不同企业的实际需求。</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 幻灯片6: Q&A -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">Q&A / 互动环节</h2>
+                </div>
+                
+                <div class="qa-section">
+                    <div class="qa-intro">
+                        <div class="qa-icon">💬</div>
+                        <h3>欢迎提问</h3>
+                        <p>销售、客服、运营自由提问</p>
+                    </div>
+                    
+                    <div class="qa-process">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>收集问题</h4>
+                                <p>记录所有提问和建议</p>
+                            </div>
+                        </div>
+                        <div class="process-arrow">→</div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>优化规划</h4>
+                                <p>用于优化下一迭代规划</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 图片预览弹窗 -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeImageModal()">&times;</button>
+            <img id="modalImage" class="modal-image" src="" alt="功能详情图片">
+        </div>
+    </div>
+
+    <!-- 控制按钮 -->
+    <div class="controls">
+        <button class="control-btn prev-btn" onclick="changeSlide(-1)">❮</button>
+        <button class="control-btn next-btn" onclick="changeSlide(1)">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
